@@ -505,7 +505,19 @@ footer .footer__bottom .nav-link {
 }
 
 .viewing .viewing__content h2 {
+  font-size: 30px;
+  color: #616161;
   font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  margin: 50px 0px 15px 0px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-right: 9px;
+}
+
+.viewing .viewing__content a {
+  color: #07612f;
 }
 
 @media screen and (max-width: 1350px) {
@@ -518,7 +530,7 @@ footer .footer__bottom .nav-link {
 }
 
 .banner {
-  background: url("../img/udemy-logo-semi-transparent.svg") 0/30% no-repeat, linear-gradient(61deg, #6e1a52, #76c5d6 41%);
+  background: url("../imgdow/opened-book-4278.svg") 0/30% no-repeat, linear-gradient(61deg, #6e1a52, #76c5d6 41%);
   background-blend-mode: overlay;
   height: 325px;
   text-align: center;
@@ -800,7 +812,7 @@ footer .footer__bottom .nav-link {
 }
 
 .cover {
-  background-image: url("../img/cover.jpg");
+  background-image: url("../imgdow/download.jpg");
   height: 500px;
   position: relative;
 }
