@@ -1,0 +1,13 @@
+/* Back to top */
+.backToTop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}

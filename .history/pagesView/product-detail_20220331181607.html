@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-100">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyEbook</title>
+    
+        <!-- BS4 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <!-- FONT AWESOME  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    
+        <!-- FONT GOOGLE -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    
+        <!-- OWL CAROUSEL -->
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../css/main.css">
+    
+        <!-- Custom css - Các file css do chúng ta tự viết -->
+        <link rel="stylesheet" href="../assets/css/app.css" type="text/css">
+    </head>
+    
+    <body>
+         <!-- HEADER -->
+         <header>
+            <nav class="myNavBar navbar navbar-expand-md navbar-light">
+                <div class="d-md-none col-sm-2 col-3">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation" action="./pagesView/search.html">
+                        <span class="navbar-toggler-icon" type="submit"></span>
+                    </button>
+                </div>
+                <div class="col-xl-7 col-lg-9 col-md-8 col-sm-8 col-6 myNavBar__col">
+                    <div class="myNavBar__left">
+                        <a class="navbar-brand" href="#">
+                            <img class="logo-black" src="../imgdow/e-reader-ebook-svgrepo-com.svg" alt="logo black">
+                            <img class="logo-white" src="../imgdow/e-reader-ebook-svgrepo-com.svg" alt="logo white">
+                        </a>
+                        <form class="myNavBar__form-search" action="./pagesView/search.html">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...." type="text" aria-label="Search"
+                                name="keyword_tensanpham">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2" >
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-3 col-md-4 col-sm-2 col-3 myNavBar--reset">
+                    <div class="myNavBar__right">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item business">
+                                <a class="nav-link" href="../pagesView/products.html">Sản Phẩm</a>
+    
+                            </li>
+                            <li class="nav-item instructor">
+                                <a class="nav-link" href="../pagesView/contact.html">Liên Hệ</a>
+                            </li>
+                            <li class="nav-item myNavBar__cart">
+                                <span><a class="nav-link" href="../pagesView/cart.html"><i class="fa fa-shopping-cart"></i></a></span>
+                            </li>
+                            <li class="nav-item myNavBar__buttons text-nowrap">
+                                <!-- Nếu chưa đăng nhập thì hiển thị nút Đăng nhập -->
+                                <button class="button button--red"><a class="nav-link" href="../pagesView/login.html">Đăng nhập</a></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
+            </nav>
+        </header>
+
+    <main role="main">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+        <div class="container mt-4">
+            <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="container-fliud">
+                    <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post"
+                        action="/php/twig/frontend/giohang/themvaogiohang">
+                        <input type="hidden" name="sp_ma" id="sp_ma" value="5">
+                        <input type="hidden" name="sp_ten" id="sp_ten" value="Samsung Galaxy Tab 10.1 3G 16G">
+                        <input type="hidden" name="sp_gia" id="sp_gia" value="10990000.00">
+                        <input type="hidden" name="hinhdaidien" id="hinhdaidien" value="samsung-galaxy-tab-10.jpg">
+
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+                                <div class="preview-pic tab-content">
+                                    <div class="tab-pane" id="pic-1">
+                                        <img src="../assets/img/product/samsung-galaxy-tab-10.jpg">
+                                    </div>
+                                    <div class="tab-pane" id="pic-2">
+                                        <img src="../assets/img/product/samsung-galaxy-tab.jpg">
+                                    </div>
+                                    <div class="tab-pane active" id="pic-3">
+                                        <img src="../assets/img/product/samsung-galaxy-tab-4.jpg">
+                                    </div>
+                                </div>
+                                <ul class="preview-thumbnail nav nav-tabs">
+                                    <li class="active">
+                                        <a data-target="#pic-1" data-toggle="tab" class="">
+                                            <img src="../assets/img/product/samsung-galaxy-tab-10.jpg">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-target="#pic-2" data-toggle="tab" class="">
+                                            <img src="../assets/img/product/samsung-galaxy-tab.jpg">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-target="#pic-3" data-toggle="tab" class="active">
+                                            <img src="../assets/img/product/samsung-galaxy-tab-4.jpg">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="details col-md-6">
+                                <h3 class="product-title">Samsung Galaxy Tab 10.1 3G 16G</h3>
+                                <div class="rating">
+                                    <div class="stars">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <span class="review-no">999 reviews</span>
+                                </div>
+                                <p class="product-description">Màn hình 10.1 inch cảm ứng đa điểm</p>
+                                <small class="text-muted">Giá cũ: <s><span>10,990,000.00 vnđ</span></s></small>
+                                <h4 class="price">Giá hiện tại: <span>10,990,000.00 vnđ</span></h4>
+                                <p class="vote"><strong>100%</strong> hàng <strong>Chất lượng</strong>, đảm bảo
+                                    <strong>Uy
+                                        tín</strong>!</p>
+                                <h5 class="sizes">sizes:
+                                    <span class="size" data-toggle="tooltip" title="cỡ Nhỏ">s</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Trung bình">m</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Lớn">l</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Đại">xl</span>
+                                </h5>
+                                <h5 class="colors">colors:
+                                    <span class="color orange not-available" data-toggle="tooltip"
+                                        title="Hết hàng"></span>
+                                    <span class="color green"></span>
+                                    <span class="color blue"></span>
+                                </h5>
+                                <div class="form-group">
+                                    <label for="soluong">Số lượng đặt mua:</label>
+                                    <input type="number" class="form-control" id="soluong" name="soluong">
+                                </div>
+                                <div class="action">
+                                    <a class="add-to-cart btn btn-default" id="btnThemVaoGioHang">Thêm vào giỏ hàng</a>
+                                    <a class="like btn btn-default" href="#"><span class="fa fa-heart"></span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="container-fluid">
+                    <h3>Thông tin chi tiết về Sản phẩm</h3>
+                    <div class="row">
+                        <div class="col">
+                            Vi xử lý Dual-core 1 Cortex-A9 tốc độ 1GHz
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End block content -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span>Bản quyền © bởi <a href="https://nentang.vn">Nền Tảng</a> - <script>document.write(new Date().getFullYear());</script>.</span>
+            <span class="text-muted">Hành trang tới Tương lai</span>
+
+            <p class="float-right">
+                <a href="#">Về đầu trang</a>
+            </p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popperjs/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom script - Các file js do mình tự viết -->
+    <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

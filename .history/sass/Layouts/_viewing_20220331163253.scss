@@ -1,0 +1,37 @@
+.viewing {
+    padding: $pd-3 + 2 0;
+
+    .viewing__content {
+        width: 90%;
+        margin: auto;
+
+        h2 {
+            font-size: $fs-5 + 6;
+            color:#616161; 
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 22px; 
+            margin: 50px 0px 15px 0px ;
+            text-transform: uppercase;
+            display:inline-block;
+            padding-right:9px ;
+        }
+        .view{
+        color: #07612f;
+        }
+        
+    }
+
+    @include responsive("screen-1") {
+        .viewing__content {
+            .card {
+                .card-body {
+                    .card-title {
+                        @include styleText($color-black-0, $fs-1, $fw-1);
+                        margin-bottom: $mg-0 + 5;
+                    }
+                }
+            }
+        }
+    }
+}

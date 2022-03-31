@@ -168,9 +168,9 @@ body {
 }
 
 .myNavBar .myNavBar__right .navbar-nav {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -184,7 +184,7 @@ body {
 
 .myNavBar .myNavBar__right .navbar-nav .nav-item .nav-link {
   color: #505763;
-  font-size: 13px;
+  font-size: 19px;
   font-weight: normal;
 }
 
@@ -303,6 +303,7 @@ footer {
   color: #686f7a;
   font-size: 13px;
   font-weight: normal;
+  background-color: #f5f5f5;
 }
 
 footer .footer__top {
@@ -321,15 +322,20 @@ footer .footer__top ul .nav-item {
 
 footer .footer__top ul .nav-item .nav-link {
   color: #007791;
-  padding: 0;
+  padding: 4px;
 }
 
 footer .footer__top ul .nav-item .nav-link.bold {
   font-weight: 700;
 }
 
+footer .footer__top ul .nav-item h4 {
+  padding-top: 17px;
+}
+
 footer .footer__top .btn-group {
   display: block;
+  padding-top: 17px;
 }
 
 footer .footer__top .btn-group .button--dropup {
@@ -353,10 +359,11 @@ footer .footer__top .btn-group .dropdown-menu {
 footer .footer__bottom {
   width: 90%;
   margin: 30px auto;
+  margin-bottom: 5px;
 }
 
 footer .footer__bottom img {
-  width: 110px;
+  width: 50px;
   margin-right: 10px;
 }
 
@@ -516,7 +523,7 @@ footer .footer__bottom .nav-link {
   padding-right: 9px;
 }
 
-.viewing .viewing__content a {
+.viewing .viewing__content .viewAll {
   color: #07612f;
 }
 
@@ -594,56 +601,6 @@ footer .footer__bottom .nav-link {
 .students .students__content h2 {
   font-size: 24px;
   margin-bottom: 20px;
-}
-
-.partners {
-  background-color: #f7f8fa;
-  padding: 20px 0;
-}
-
-.partners .partners__content {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.partners .partners__content .partners__text {
-  text-align: center;
-}
-
-.partners .partners__content .partners__imgs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media screen and (max-width: 1200px) {
-  .partners .partners__content {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .partners .partners__content {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .partners .partners__content {
-    width: 60%;
-  }
-  .partners .partners__content .partners__imgs {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .partners .partners__content .partners__imgs .partners__items {
-    width: 50%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
 }
 
 .jobs {
@@ -761,6 +718,28 @@ footer .footer__bottom .nav-link {
 .sidebarMini.is-opened {
   -webkit-transform: translateX(60%);
           transform: translateX(60%);
+}
+
+/* Back to top */
+.backToTop {
+  position: fixed;
+  right: 11px;
+  bottom: 50px;
+  visibility: hidden;
+  opacity: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.backToTop i {
+  color: #0BBBCC;
+  border: 2px solid #0BBBCC;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 50%;
 }
 
 .button--white {
@@ -907,7 +886,7 @@ footer .footer__bottom .nav-link {
 }
 
 .card {
-  height: 275px;
+  height: 300px;
   margin-right: 1px;
 }
 
@@ -926,6 +905,10 @@ footer .footer__bottom .nav-link {
   font-size: 12px;
   font-weight: normal;
   margin: 5px 0;
+}
+
+.card .card-body .card__stars {
+  padding: 5px 0;
 }
 
 .card .card-body .card__stars i {
@@ -948,7 +931,12 @@ footer .footer__bottom .nav-link {
 
 .card .card-body .card__price {
   text-align: right;
-  padding: 7px 0;
+  padding: 5px -1 0;
+}
+
+.card .card-body .card__price b {
+  font-size: 15px;
+  color: black;
 }
 
 .card .card-body .card__price span:first-child {
@@ -1184,10 +1172,6 @@ body.darkMode {
   color: #d8e2ef;
 }
 
-.darkMode .partners {
-  background-color: #132238;
-}
-
 .darkMode .jobs {
   background-color: #132238;
 }
@@ -1198,6 +1182,10 @@ body.darkMode {
 
 .darkMode .jobs .jobs__content .border-right {
   border-right: 1px solid #344050 !important;
+}
+
+.darkMode footer {
+  background-color: #132238;
 }
 
 .darkMode footer .footer__top ul .nav-item .nav-link {

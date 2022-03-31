@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-100">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyEbook</title>
+    
+        <!-- BS4 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <!-- FONT AWESOME  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    
+        <!-- FONT GOOGLE -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    
+        <!-- OWL CAROUSEL -->
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../css/main.css">
+    
+        <!-- Custom css - Các file css do chúng ta tự viết -->
+        <link rel="stylesheet" href="../assets/css/app.css" type="text/css">
+    </head>
+    
+    <body>
+         <!-- HEADER -->
+         <header>
+            <nav class="myNavBar navbar navbar-expand-md navbar-light">
+                <div class="d-md-none col-sm-2 col-3">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation" action="./pagesView/search.html">
+                        <span class="navbar-toggler-icon" type="submit"></span>
+                    </button>
+                </div>
+                <div class="col-xl-7 col-lg-9 col-md-8 col-sm-8 col-6 myNavBar__col">
+                    <div class="myNavBar__left">
+                        <a class="navbar-brand" href="#">
+                            <img class="logo-black" src="../imgdow/e-reader-ebook-svgrepo-com.svg" alt="logo black">
+                            <img class="logo-white" src="../imgdow/e-reader-ebook-svgrepo-com.svg" alt="logo white">
+                        </a>
+                        <form class="myNavBar__form-search" action="./pagesView/search.html">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...." type="text" aria-label="Search"
+                                name="keyword_tensanpham">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2" >
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-3 col-md-4 col-sm-2 col-3 myNavBar--reset">
+                    <div class="myNavBar__right">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item business">
+                                <a class="nav-link" href="../pagesView/products.html">Sản Phẩm</a>
+    
+                            </li>
+                            <li class="nav-item instructor">
+                                <a class="nav-link" href="../pagesView/contact.html">Liên Hệ</a>
+                            </li>
+                            <li class="nav-item myNavBar__cart">
+                                <span><a class="nav-link" href="../pagesView/cart.html"><i class="fa fa-shopping-cart"></i></a></span>
+                            </li>
+                            <li class="nav-item myNavBar__buttons text-nowrap">
+                                <!-- Nếu chưa đăng nhập thì hiển thị nút Đăng nhập -->
+                                <button class="button button--red"><a class="nav-link" href="../pagesView/login.html">Đăng nhập</a></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
+            </nav>
+        </header>
+
+    <main role="main">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+        <form name="frmdangky" id="frmdangky" method="post" action="#">
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card mx-4">
+                            <div class="card-body p-4">
+                                <h1>Đăng ký</h1>
+                                <p class="text-muted">Tạo tài khoản</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Tên tải khoản"
+                                        name="kh_tendangnhap">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="password" placeholder="Mật khẩu"
+                                        name="kh_matkhau">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Họ tên" name="kh_ten">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <select name="kh_gioitinh" class="form-control">
+                                        <option value="0">Nam</option>
+                                        <option value="1">Nữ</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Địa chỉ" name="kh_diachi">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Điện thoại"
+                                        name="kh_dienthoai">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="email" placeholder="Email" name="kh_email">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="Ngày sinh" name="kh_ngaysinh">
+                                    <input class="form-control" type="text" placeholder="Tháng sinh"
+                                        name="kh_thangsinh">
+                                    <input class="form-control" type="text" placeholder="Năm sinh" name="kh_namsinh">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="text" placeholder="CMND" name="kh_cmnd">
+                                </div>
+                                <button class="btn btn-block btn-success" name="btnDangKy">Tạo tài khoản</button>
+                            </div>
+                            <div class="card-footer p-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <center>Nếu bạn đã có Tài khoản, xin mời Đăng nhập</center>
+                                        <a class="btn btn-primary form-control"
+                                            href="login.html">Đăng nhập</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- End block content -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span>Bản quyền © bởi <a href="https://nentang.vn">Nền Tảng</a> - <script>document.write(new Date().getFullYear());</script>.</span>
+            <span class="text-muted">Hành trang tới Tương lai</span>
+
+            <p class="float-right">
+                <a href="#">Về đầu trang</a>
+            </p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popperjs/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom script - Các file js do mình tự viết -->
+    <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>
