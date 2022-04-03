@@ -1,7 +1,6 @@
 
 .body_sanPham{
  background:#eee ;
- margin-bottom: 10px;
  
 }
 .preview {
@@ -14,8 +13,6 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 996px) {
@@ -93,8 +90,6 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
 }
 
 .colors {
@@ -195,7 +190,6 @@
 .tooltip-inner {
     padding: 1.3em;
 }
-
 
 @-webkit-keyframes opacity {
     0% {

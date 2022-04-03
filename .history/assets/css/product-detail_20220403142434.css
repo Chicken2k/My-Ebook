@@ -1,9 +1,7 @@
-
-.body_sanPham{
- background:#eee ;
- margin-bottom: 10px;
- 
+img {
+    max-width: 100%;
 }
+
 .preview {
     display: -webkit-box;
     display: -webkit-flex;
@@ -14,8 +12,6 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 996px) {
@@ -42,7 +38,7 @@
     margin-right: 2.5%;
 }
 
-.preview-thumbnail.nav-tabs li img {
+.preview-thumbnail.nav-tabs  img {
     max-width: 100%;
     display: block;
 }
@@ -93,8 +89,6 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 10px;
 }
 
 .colors {
@@ -195,7 +189,6 @@
 .tooltip-inner {
     padding: 1.3em;
 }
-
 
 @-webkit-keyframes opacity {
     0% {
